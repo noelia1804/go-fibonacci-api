@@ -25,4 +25,4 @@ jobs:
             docker pull ${{ github.event.inputs.image_reference }}
             docker stop fibonacci || true
             docker rm fibonacci || true
-            docker run -d --name fibonacci -p 808<StudentNumber>:8080 ${{ github.event.inputs.image_reference }}
+            docker run -d --name fibonacci -p 8080:8080 ${{ github.event.inputs.image_reference }}
